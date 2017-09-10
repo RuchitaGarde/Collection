@@ -1,2 +1,2 @@
 # Collection
-A collection of my papers, presentation and other research material
+A collection of my papers, presentations and other research material
