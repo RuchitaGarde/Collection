@@ -6,3 +6,7 @@ This folder contains my academic paper on microservices - 'MICROSERVICES - Divid
 
 ## Software Testing Mini Blogs
 This folder contains the mini blogs on software testing that I wrote on [Piazza](https://piazza.com/) during the semester when I took a software testing class.
+
+## Software Security Paper
+'Designing, developing and deploying into production secure big data applications using Spark, Hadoop, AWS and ZooKeeper - Ruchita Garde'.
+This is an academic paper written by me as part of my Software Security class.
