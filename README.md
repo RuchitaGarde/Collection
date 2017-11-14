@@ -9,6 +9,6 @@ This folder contains the mini blogs on software testing that I wrote on [Piazza]
 - Some interesting testing apps & APIs I came across at my workplace
 - Testing for Data Science
 
-## Software Security Paper
-'Designing, developing and deploying into production secure big data applications using Spark, Hadoop, AWS and ZooKeeper - Ruchita Garde'.
-This is an academic paper written by me which talks about security considerations to be made while developing big data applications.
+## Security in Big Data
+This folder contains an academic paper written by me which talks about security considerations to be made while developing big data applications.
+- Designing, developing and deploying into production secure big data applications using Spark, Hadoop, AWS and ZooKeeper - Ruchita Garde.
