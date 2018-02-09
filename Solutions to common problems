@@ -11,3 +11,8 @@ To update to latest gyp, follow the step (for windows machine):
 (Used to find where your node is located)
 - cd into the directory that node.exe is contained in.
 - npm install -g node-gyp@latest
+
+2. When trying to see which ports are listening on your computer:
+- Run cmd as administrator
+- 'netstat -ano |findstr : yourportnumber' OR just 'netstat -ano' will give you a list of all of them. THe last column of the row of your port will have the pid value. Note it.
+- taskkill /PID yourpidhere /F
