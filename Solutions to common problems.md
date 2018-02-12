@@ -20,3 +20,11 @@ To update to latest gyp, follow the step (for windows machine):
 3. When trying to SSH into a SSH which is protected by a private key, and you are using Putty:
 - If not already done, first convert the filetype of your private into .ppk (the filetype accepted by putty). For eg, you can convert a .pem or a .txt file into .pppk.
 To do that, download puttygen from https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html. Open puttygen, 'load' an existing key, and then 'save' the key. This will automatically save the key in putty's ppk format.
+
+4. Some PostGres things.
+- If you had setup your PostGre Server with a password (Note that using a password is not mandatory), then while trying to setup a local copy of a node.js project on your computer might you an error which looks something like: 
+*error: password authentication failed for user "username"*, where *username* is the name you used while setting up your server. To solve  this, include this line in your .env file:
+`DB_URI=postgresql://username:password@localhost/dbname` instead of 
+`DB_URI=postgresql://username@localhost/tmastradetest` if you did not have a password.
+
+- The `\d` command, when used in psql prompt lists all the tables present in your database.
