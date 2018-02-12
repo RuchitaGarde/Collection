@@ -1,3 +1,5 @@
+This is work in progress
+
 This file contains some common problems with respect to installattion & others I faced while working on development projects. I am noting them down here with solutions that worked for me.
 Please note that I use a windows machine, & it is not easy to find solutions for windows, & my solutions will only be for windows users.
 
