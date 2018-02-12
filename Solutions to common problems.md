@@ -18,11 +18,24 @@ To update to latest gyp, follow the step (for windows machine):
 - `taskkill /PID yourpidhere /F`
 
 3. When trying to SSH into a remote server which is protected by a private key, and you are using Putty:
-- If not already done, first convert the filetype of your private into .ppk (the filetype accepted by putty). For eg, you can convert a .pem or a .txt file into .pppk.
+- If not already done, first convert the filetype of your key into .ppk (the filetype accepted by putty). For eg, you can convert a .pem or a .txt file into .pppk.
 To do that, download puttygen from https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html. Open puttygen, *load* an existing key, and then 'save' the key. This will automatically save the key in putty's ppk format.
 - Now, open putty, enter the *ip address*, expand *SSH* under *Connection* on the left hand side Categories menu, select *Auth*, and now browse for the new .ppk file you just created. 
 
-4. Some PostGres things.
+4. When trying to copy files from a remote server onto your machine or vice versa:
+- On windows machines, do not use `scp`, instead, use `pscp` command. To do that, first download *pscp.exe* from https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html. 
+- Run the executable. Also, add the location to which this file is stored in the *PATH* in your environment variables.
+- Now, whether you want to copy from remote to local or local to remote, ALWAYS use this command on the command prompt of your local machine:
+`pscp source destination`
+  - EG: From remote to local: 
+  `pscp Username@ipaddress:/home/example_file.py C:\Users\localuser\Documents\whatever_I_want_to_name_my_file.py`
+
+- In cases when the remote machine required a cryptographic key to login, that key needs to be sent along with the pscp command in this way using the *-i* flag for the key_file and *-l* for the username:
+Eg: From local to remote:
+`pscp -i C:\Users\localuser\key_file.ppk -l ec2-user C:\Users\localuser\dump.sql ec2-user@ipaddress:/home/ec2-user/whatever_I_want_to_name_my_file.sql`
+Please note that thekey has to be in .ppk format, & if it is not, it can be converted using the steps provided in point #3.
+
+5. Some PostGres things.
 - If you had setup your PostGre Server with a password (Note that using a password is not mandatory), then while trying to setup a local copy of a node.js project on your computer might you an error which looks something like: 
 *error: password authentication failed for user "username"*, where *username* is the name you used while setting up your server. To solve  this, include this line in your .env file:
 `DB_URI=postgresql://username:password@localhost/dbname` instead of 
