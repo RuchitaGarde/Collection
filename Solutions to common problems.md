@@ -17,9 +17,10 @@ To update to latest gyp, follow the step (for windows machine):
 - `netstat -ano |findstr : yourportnumber` OR just `netstat -ano` will give you a list of all of them. THe last column of the row of your port will have the pid value. Note it.
 - `taskkill /PID yourpidhere /F`
 
-3. When trying to SSH into a SSH which is protected by a private key, and you are using Putty:
+3. When trying to SSH into a remote server which is protected by a private key, and you are using Putty:
 - If not already done, first convert the filetype of your private into .ppk (the filetype accepted by putty). For eg, you can convert a .pem or a .txt file into .pppk.
-To do that, download puttygen from https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html. Open puttygen, 'load' an existing key, and then 'save' the key. This will automatically save the key in putty's ppk format.
+To do that, download puttygen from https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html. Open puttygen, *load* an existing key, and then 'save' the key. This will automatically save the key in putty's ppk format.
+- Now, open putty, enter the *ip address*, expand *SSH* under *Connection* on the left hand side Categories menu, select *Auth*, and now browse for the new .ppk file you just created. 
 
 4. Some PostGres things.
 - If you had setup your PostGre Server with a password (Note that using a password is not mandatory), then while trying to setup a local copy of a node.js project on your computer might you an error which looks something like: 
