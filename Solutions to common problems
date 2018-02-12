@@ -16,3 +16,7 @@ To update to latest gyp, follow the step (for windows machine):
 - Run cmd as administrator
 - 'netstat -ano |findstr : yourportnumber' OR just 'netstat -ano' will give you a list of all of them. THe last column of the row of your port will have the pid value. Note it.
 - taskkill /PID yourpidhere /F
+
+3. When trying to SSH into a SSH which is protected by a private key, and you are using Putty:
+- If not already done, first convert the filetype of your private into .ppk (the filetype accepted by putty). For eg, you can convert a .pem or a .txt file into .pppk.
+To do that, download puttygen from https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html. Open puttygen, 'load' an existing key, and then 'save' the key. This will automatically save the key in putty's ppk format.
