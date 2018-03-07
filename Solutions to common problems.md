@@ -29,6 +29,7 @@ To do that, download puttygen from https://www.chiark.greenend.org.uk/~sgtatham/
 `ssh -i C:\privatekeylocation.ppk -L port:host:hostport username@hostname`
   - Eg: `ssh -i C:\users\user\key.ppk -L 5432:localhost:5432 user@12.234.678.900`
   *For postgres databases, the portname is usually 5432 by default.*
+  This is called SSH tunneling.
 - If your private key is not protected by a passphrase, you may get an error: 
 
 
